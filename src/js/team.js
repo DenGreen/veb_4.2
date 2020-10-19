@@ -35,7 +35,7 @@ export class Team {
 
   *[Symbol.iterator]() {
     for(let value of this.members){
-      yield console.log(value);
+      yield value;
     }
   }
 }

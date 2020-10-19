@@ -1,10 +1,10 @@
 import { Bowman } from "../bowman";
-import { Zombie } from "../zombie";
+import { Magician } from "../magician";
 import { Team } from "../team";
 
 
 const dan = new Bowman("Dan", "Bowman");
-const trim = new Zombie("Trim", "Zombie");
+const trim = new Magician("Trim", "Magician");
 
 test('Team.add должен возвращять объект типа {name: "Dan", type: "Bowman"}', () =>{
     const expected = [{name: "Dan", type: "Bowman"}];
@@ -14,8 +14,8 @@ test('Team.add должен возвращять объект типа {name: "D
     expect(received).toEqual(expected);
 })
 
-test('Team.add должен возвращять объект типа {name: "Trim", type: "Zombie"}', () =>{
-    const expected = [{name: "Trim", type: "Zombie"}];
+test('Team.add должен возвращять объект типа {name: "Trim", type: "Magician"}', () =>{
+    const expected = [{name: "Trim", type: "Magician"}];
     const team = new Team();
 
     const received = team.add(trim);
@@ -35,7 +35,7 @@ test('Team.add должен выбрасывать ошибку', () =>{
 test('Team.toArray должен производить конвертацию Set в массив', () =>{
     const expected = [
         {name: "Dan", type: "Bowman"},
-        {name: "Trim", type: "Zombie"}
+        {name: "Trim", type: "Magician"}
     ];
     const team = new Team();
 
